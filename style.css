@@ -11,6 +11,22 @@
     background-color: black;
 }
 
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.board, .square {
+    width: 50%;
+}
+
+.board {
+    width: 60px;
+    height: 60px;
+}
+
 .square {
     display: flex;
     width: 150px;
@@ -25,7 +41,6 @@
     align-items: center;
     font-weight: bold;
 
-
 }
 
 h1 {
@@ -36,11 +51,8 @@ h1 {
 }
 
 .disclaimer {
-    background-color: white;
     padding: 10px;
     font-family: Helvetica, sans-serif;
-    margin-top: 30px;
-
 }
 
 .disclaimer h2 {
@@ -53,5 +65,37 @@ h1 {
     margin: 0;
     font-size: 1rem;
     
-
 }
+
+#Scoreboard {
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.leftBoard {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.rightBoard {
+    display: flex;
+    width: 150px;
+    margin: 50px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
