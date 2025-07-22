@@ -18,14 +18,7 @@
     gap: 20px;
 }
 
-.board, .square {
-    width: 50%;
-}
 
-.board {
-    width: 60px;
-    height: 60px;
-}
 
 .square {
     display: flex;
@@ -40,6 +33,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    border-radius: 8px;
 
 }
 
@@ -48,6 +42,21 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-weight: Bold;
+}
+
+#resetButton {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    height: 100px;
+    width: 200px;
+    border-radius: 18px;
+    font-family: American Typewriter, sans-serif;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+
 }
 
 .disclaimer {
@@ -67,35 +76,4 @@ h1 {
     
 }
 
-#Scoreboard {
-
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-
-.leftBoard {
-    display: flex;
-    width: 200px;
-    height: 150px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    flex-direction: column;
-    margin: 50px;
-    border-radius: 10px;
-}
-
-.rightBoard {
-    display: flex;
-    width: 150px;
-    margin: 50px;
-    height: 100px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    flex-direction: column;
-    border-radius: 10px;
-}
 
