@@ -105,12 +105,18 @@ function checkWinner(squares) {
             }
         }
     }
+
+    if(moveCount == 9) {
+        updateStatus("Its a tie!");
+        gameOver = true;
+    }
 };
 
 //resets the game back to its origianl state
 function reset() {
     boxList = Array(9).fill(null);
     objectList = Array(9).fill(null);
+    moveCount == 0;
     document.body.style.backgroundColor = "#1fe0aa";
     gameOver = false;
     updateStatus("Its O's turn");
