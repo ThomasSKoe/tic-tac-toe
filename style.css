@@ -1,0 +1,48 @@
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.square {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: f0f0f0;
+    cursor: pointer;
+    border: 2px solid black;
+    font-size: 2rem;
+    align-items: center;
+    user-select: none;
+}
+
+h1 {
+    font-family: American Typewriter, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: Bold;
+}
+
+.disclaimer {
+    background-color: white;
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    margin-top: 30px;
+
+}
+
+.disclaimer h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+
+}
+
+.disclaimer p {
+    margin: 0;
+    font-size: 1rem;
+    
+
+}
