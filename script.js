@@ -106,7 +106,7 @@ function checkWinner(squares) {
         }
     }
 
-    if(moveCount == 9) {
+    if(moveCount == 9 && gameOver == false) {
         updateStatus("Its a tie!");
         gameOver = true;
     }
