@@ -7,6 +7,10 @@
     margin: 20px auto;
 }
 
+#body {
+    background-color: black;
+}
+
 .square {
     display: flex;
     width: 150px;
@@ -14,9 +18,14 @@
     background-color: f0f0f0;
     cursor: pointer;
     border: 2px solid black;
-    font-size: 2rem;
+    font-size: 10rem;
     align-items: center;
     user-select: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+
 }
 
 h1 {
