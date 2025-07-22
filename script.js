@@ -116,7 +116,7 @@ function checkWinner(squares) {
 function reset() {
     boxList = Array(9).fill(null);
     objectList = Array(9).fill(null);
-    moveCount == 0;
+    moveCount = 0;
     document.body.style.backgroundColor = "#1fe0aa";
     gameOver = false;
     updateStatus("Its O's turn");
