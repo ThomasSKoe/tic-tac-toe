@@ -7,9 +7,6 @@ let moveCount = 0;
 // list of squares
 const squares = document.querySelectorAll('.square');
 
-//set background
-document.body.style.backgroundColor = "#1fe0aa";
-
 //if game is complete 
 //  makes it so you cant comtinue to play after someone wins
 let gameOver = false;
@@ -46,7 +43,7 @@ squares.forEach(square => {
                 event.target.textContent = "O";
                 event.target.style.color = "blue";
                 event.target.dataset.val = "1";
-                document.body.style.backgroundColor = "#f54245";
+                setBackgroundColor("#f54245");
                 currentPlayer = 2;
 
                 boxList[parsedId] = "O";
@@ -58,7 +55,7 @@ squares.forEach(square => {
                 event.target.textContent = "X";
                 event.target.style.color = "Red";
                 event.target.dataset.val = "2";
-                document.body.style.backgroundColor = "#42b3f5";
+                setBackgroundColor("#42b3f5");
                 currentPlayer = 1;
 
                 boxList[parsedId] = "X";
@@ -100,6 +97,8 @@ function checkWinner(squares) {
                 console.log("winner");
                 let winner = box1;
                 let winMessage = `${winner} Wins!`;
+                setBackgroundColor("#e342f5");
+                
                 updateStatus(winMessage);
                 gameOver = true;       
             }
@@ -108,6 +107,7 @@ function checkWinner(squares) {
 
     if(moveCount == 9 && gameOver == false) {
         updateStatus("Its a tie!");
+        setBackgroundColor("#31f22e");
         gameOver = true;
     }
 };
@@ -117,7 +117,8 @@ function reset() {
     boxList = Array(9).fill(null);
     objectList = Array(9).fill(null);
     moveCount = 0;
-    document.body.style.backgroundColor = "#1fe0aa";
+    setBackgroundColor("#42b3f5");
+
     gameOver = false;
     updateStatus("Its O's turn");
 
@@ -142,5 +143,12 @@ function updateStatus(newtext) {
 
     const status = document.getElementById("Status");
     status.textContent = newtext;
+
+}
+
+function setBackgroundColor(color) {
+    const status = document.getElementById("Status");
+    status.style.backgroundColor = color;
+    status.style.boxShadow = `0 0 8px 3px ${color}`;
 
 }

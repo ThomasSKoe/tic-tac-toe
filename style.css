@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 #gameBoard {
     display: grid;
     grid-template-columns: repeat(3, 120px);
@@ -7,8 +14,8 @@
     margin: 20px auto;
 }
 
-#body {
-    background-color: black;
+body {
+    background-color: #adceef;
 }
 
 #game {
@@ -34,32 +41,50 @@
     align-items: center;
     font-weight: bold;
     border-radius: 8px;
-
+    transition: transform 0.2s ease;
+}
+.square:hover {
+    transform: translateY(-4px);
 }
 
 h1 {
-    font-family: American Typewriter, sans-serif;
+    margin-top: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-weight: Bold;
+    margin-bottom: 1rem;
 }
 
 #resetButton {
     display: flex;
     justify-content: center;
+
 }
 
 .button {
     height: 75px;
+    margin-top: 1rem;
     width: 150px;
     border-radius: 18px;
     font-family: American Typewriter, sans-serif;
     font-size: 1.75rem;
     text-transform: uppercase;
+    box-shadow: 2 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
 
+
+}
+#resetButton .button {
+    border: 0;
+}
+
+.button:hover {
+    transform: translateY(-0.3rem);
 }
 
 .disclaimer {
+    margin-top: 2rem;
     padding: 10px;
     font-family: Courier New, monospace;
 }
@@ -82,9 +107,11 @@ h3 {
     font-size: 2rem;
     background-color: white;
     padding: 10px;
-    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.5);
     display: inline-block;
     justify-content: center;
     border-radius: 24px;
+    background-color: #42b3f5;
+    box-shadow: 0 0 8px 3px #42b3f5;
     
 }
+
